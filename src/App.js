@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css'
+import ResultTem from './components/resultTem'
 
 
 import Hutt from './images/Hutt.jpg'
@@ -60,7 +61,7 @@ class App extends Component {
     handleSubmit(event) {
         event.preventDefault();
         const state = this.state;
-        if (state.name, state.age, state.height, state.hairColor, state.eyeColor){
+        if (state.name && state.age && state.height && state.hairColor && state.eyeColor){
             if (state.height === "tall"){
                 if (state.age === "ancient"){
                     if (state.eyeColor === "yellow" || state.eyeColor === "red" || state.eyeColor === "green" || state.eyeColor === "orange" ){
@@ -133,6 +134,35 @@ class App extends Component {
     
     render(){
         console.log(this.state)
+        //set data for result page
+        
+            const img = this.state.img;
+            const reset = this.resetSelection;
+            
+            if (this.state.result) {
+                const Username = this.state.name;
+                const Name = this.state.species[this.state.result].name;
+                const Language = this.state.species[this.state.result].language;
+                const Classification = this.state.species[this.state.result].classification;
+                const Designation = this.state.species[this.state.result].designation;
+                const Eyes = this.state.species[this.state.result].eye_colors;
+                const Hair = this.state.species[this.state.result].hair_colors;
+                const Height = this.state.species[this.state.result].average_height;
+                
+            }
+            
+            
+
+
+                            // <h2>{this.state.species[this.state.result].name}</h2>
+                            // <p>Language: {this.state.species[this.state.result].language}</p>
+                            // <p>Classification: {this.state.species[this.state.result].classification}</p>
+                            // <p>Designation: {this.state.species[this.state.result].designation}</p>
+                            // <p>Eyes: {this.state.species[this.state.result].eye_colors}</p>
+                            // <p>Hair: {this.state.species[this.state.result].hair_colors}</p>
+                            // <p>Height: {this.state.species[this.state.result].average_height}cm</p>
+
+
         if (this.state.species && !this.state.result) {
             return(
                 <div className='wrapper'>
@@ -190,28 +220,25 @@ class App extends Component {
                     </form>
                 </div>
             )
-        } else if (this.state.result || this.state.result === 0) {
+        } else if (this.state.result) {
+
+            
+            
+
+
             return(
-                <div className="result-wrapper">
-                    <div>
-                    <h1>Hey {this.state.name}! </h1>
-                    <p>Looks like your a {this.state.species[this.state.result].name}</p>
-                    <img src={this.state.img}></img>
-                    </div>
-                    
-                    <div className="resultDiv2">
-                            <h2>{this.state.species[this.state.result].name}</h2>
-                            <p>Language: {this.state.species[this.state.result].language}</p>
-                            <p>Classification: {this.state.species[this.state.result].classification}</p>
-                            <p>Designation: {this.state.species[this.state.result].designation}</p>
-                            <p>Eyes: {this.state.species[this.state.result].eye_colors}</p>
-                            <p>Hair: {this.state.species[this.state.result].hair_colors}</p>
-                            <p>Height: {this.state.species[this.state.result].average_height}cm</p>
-                            
-                            <button onClick={this.resetSelection}>try again?</button>
-                    </div>
-                    
-                </div>
+                <ResultTem 
+                    Username={this.state.name} 
+                    Name={this.state.species[this.state.result].name}
+                    Language={this.state.species[this.state.result].language} 
+                    Classification={this.state.species[this.state.result].classification} 
+                    Designation={this.state.species[this.state.result].designation} 
+                    Eyes={this.state.species[this.state.result].eye_colors} 
+                    Hair={this.state.species[this.state.result].hair_colors} 
+                    Height={this.state.species[this.state.result].average_height} 
+                    img={img} 
+                    reset={this.resetSelection}>
+                 </ResultTem>
             )
             
 
