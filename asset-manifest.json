@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/star-wars-species-quiz/static/css/main.5a410815.chunk.css",
+    "main.js": "/star-wars-species-quiz/static/js/main.a744038f.chunk.js",
+    "main.js.map": "/star-wars-species-quiz/static/js/main.a744038f.chunk.js.map",
+    "runtime-main.js": "/star-wars-species-quiz/static/js/runtime-main.8a7cd8aa.js",
+    "runtime-main.js.map": "/star-wars-species-quiz/static/js/runtime-main.8a7cd8aa.js.map",
+    "static/js/2.59c021fe.chunk.js": "/star-wars-species-quiz/static/js/2.59c021fe.chunk.js",
+    "static/js/2.59c021fe.chunk.js.map": "/star-wars-species-quiz/static/js/2.59c021fe.chunk.js.map",
+    "index.html": "/star-wars-species-quiz/index.html",
+    "precache-manifest.340486fe53f405bd5f9eec2763d81496.js": "/star-wars-species-quiz/precache-manifest.340486fe53f405bd5f9eec2763d81496.js",
+    "service-worker.js": "/star-wars-species-quiz/service-worker.js",
+    "static/css/main.5a410815.chunk.css.map": "/star-wars-species-quiz/static/css/main.5a410815.chunk.css.map",
+    "static/js/2.59c021fe.chunk.js.LICENSE": "/star-wars-species-quiz/static/js/2.59c021fe.chunk.js.LICENSE",
+    "static/media/Dug.PNG": "/star-wars-species-quiz/static/media/Dug.4a6b6322.PNG",
+    "static/media/Ewok.PNG": "/star-wars-species-quiz/static/media/Ewok.8e26cbbb.PNG",
+    "static/media/Gungan.PNG": "/star-wars-species-quiz/static/media/Gungan.eb9d5331.PNG",
+    "static/media/Hutt.jpg": "/star-wars-species-quiz/static/media/Hutt.03c9f531.jpg",
+    "static/media/MonCalamari.PNG": "/star-wars-species-quiz/static/media/MonCalamari.1fb3d2a3.PNG",
+    "static/media/Neimodian.PNG": "/star-wars-species-quiz/static/media/Neimodian.987b962f.PNG",
+    "static/media/Sullustan.PNG": "/star-wars-species-quiz/static/media/Sullustan.7ab51776.PNG",
+    "static/media/Toydarian.PNG": "/star-wars-species-quiz/static/media/Toydarian.c8fcb77f.PNG",
+    "static/media/Trandoshan.PNG": "/star-wars-species-quiz/static/media/Trandoshan.96fff2bf.PNG",
+    "static/media/App.css": "/star-wars-species-quiz/static/media/background.45a26b67.png",
+    "static/media/yoda.jpg": "/star-wars-species-quiz/static/media/yoda.add64530.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a7cd8aa.js",
+    "static/js/2.59c021fe.chunk.js",
+    "static/css/main.5a410815.chunk.css",
+    "static/js/main.a744038f.chunk.js"
+  ]
+}
