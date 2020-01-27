@@ -25,7 +25,7 @@ class App extends Component {
             height: "short",
             hairColor: "blue",
             eyeColor: "blonde",
-            result: false
+            result: false,
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,7 +38,8 @@ class App extends Component {
         const data = await species.json();
         const hut = data.results[0];
         data.results.push(hut);
-        this.setState({species: data.results})
+        this.state.species = data.results;
+        console.log(data)
     }
 
     componentDidMount(){
@@ -54,7 +55,7 @@ class App extends Component {
         this.setState({
             [name]: value
         })
-
+        console.log(this.state)
         
     }
     //set result based on form data and if statments
@@ -91,7 +92,7 @@ class App extends Component {
                     }
                 }
             }
-            else if (state.height == "short"){
+            else if (state.height === "short"){
                 
                 if (state.age === "ancient"){
                     if (state.eyeColor === "yellow" || state.eyeColor === "orange" || state.eyeColor === "red" || state.eyeColor === "green"){
@@ -128,6 +129,7 @@ class App extends Component {
         }
     }
 
+
     //reset state for try again btn
     resetSelection() {
         this.setState({result: undefined})
@@ -140,8 +142,11 @@ class App extends Component {
             return(
                 //quiz section
                 <div className='wrapper'>
-                    <h1>Which Star Wars Species Are you??</h1>
+                    <h1>STAR</h1>
+                    <h1>WARS</h1>
+                    
                     <form>
+                    <h2>Species Quiz</h2>
                         <label>
                             Name:
                             <input required type="text" name="name" placeholder="Luke Skywalker"  onChange={this.handleChange}/>
@@ -168,7 +173,7 @@ class App extends Component {
                         Eye Color:
                             <select required name={"eyeColor"} value={this.state.value} onChange={this.handleChange}>
                             
-                                <option value="yellow">Yellow</option>
+                                <option className="option" value="yellow">Yellow</option>
                                 <option value="orange">Orange</option>
                                 <option value="green">Green</option>
                                 <option selected value="blue">Blue</option>
@@ -194,7 +199,7 @@ class App extends Component {
                     </form>
                 </div>
             )
-        } else if (this.state.result) {
+        } else if (this.state.result){
            // otherwise, if form is complete and there is a result, show results section. 
             return(
                 <ResultTem 
@@ -208,6 +213,7 @@ class App extends Component {
                     Height={this.state.species[this.state.result].average_height} 
                     img={this.state.img} 
                     reset={this.resetSelection}>
+                    transition={this.state.transition}
                  </ResultTem>
             )
         } else {

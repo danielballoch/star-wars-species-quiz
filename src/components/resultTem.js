@@ -10,7 +10,8 @@ const resultTem = ({
     Eyes, Hair,
     Height,
     img ,
-    reset
+    reset,
+    transition
 }) => (
 
 <div className="result-wrapper">
