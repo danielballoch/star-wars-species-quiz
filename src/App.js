@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css'
 import ResultTem from './components/resultTem'
 
-
+//import images for results section
 import Hutt from './images/Hutt.jpg'
 import Ewok from './images/Ewok.PNG'
 import Gungan from './images/Gungan.PNG'
@@ -14,7 +14,7 @@ import Trandoshan from './images/Trandoshan.PNG'
 import Yoda from './images/yoda.jpg'
 import Dug from './images/Dug.PNG'
 
-
+//set state presets so user can click submit immeditly and bind 'this' so fuctions work.
 class App extends Component {
     constructor(){
         super()
@@ -32,8 +32,7 @@ class App extends Component {
         this.resetSelection = this.resetSelection.bind(this);
     }
 
-    //fetch user data from jsonplaceholder and set as state
-
+    //function to fetch user data from starwars api and set as state
     getData = async function(){
         const species = await fetch('https://swapi.co/api/species/');
         const data = await species.json();
@@ -46,6 +45,7 @@ class App extends Component {
         this.getData();
     }
 
+    //handle change for form inputs, setState as value
     handleChange(event) {
         event.preventDefault();
         const target = event.target;
@@ -57,7 +57,7 @@ class App extends Component {
 
         
     }
-
+    //set result based on form data and if statments
     handleSubmit(event) {
         event.preventDefault();
         const state = this.state;
@@ -123,48 +123,22 @@ class App extends Component {
             }
                
         } else {
+            //show alert if data is not filled out yet submit is clicked
             alert("Please select all options")
         }
     }
 
+    //reset state for try again btn
     resetSelection() {
         this.setState({result: undefined})
     }
     
     
     render(){
-        console.log(this.state)
-        //set data for result page
-        
-            const img = this.state.img;
-            const reset = this.resetSelection;
-            
-            if (this.state.result) {
-                const Username = this.state.name;
-                const Name = this.state.species[this.state.result].name;
-                const Language = this.state.species[this.state.result].language;
-                const Classification = this.state.species[this.state.result].classification;
-                const Designation = this.state.species[this.state.result].designation;
-                const Eyes = this.state.species[this.state.result].eye_colors;
-                const Hair = this.state.species[this.state.result].hair_colors;
-                const Height = this.state.species[this.state.result].average_height;
-                
-            }
-            
-            
-
-
-                            // <h2>{this.state.species[this.state.result].name}</h2>
-                            // <p>Language: {this.state.species[this.state.result].language}</p>
-                            // <p>Classification: {this.state.species[this.state.result].classification}</p>
-                            // <p>Designation: {this.state.species[this.state.result].designation}</p>
-                            // <p>Eyes: {this.state.species[this.state.result].eye_colors}</p>
-                            // <p>Hair: {this.state.species[this.state.result].hair_colors}</p>
-                            // <p>Height: {this.state.species[this.state.result].average_height}cm</p>
-
-
+        //if api data loaded and form has not been completed show quiz section
         if (this.state.species && !this.state.result) {
             return(
+                //quiz section
                 <div className='wrapper'>
                     <h1>Which Star Wars Species Are you??</h1>
                     <form>
@@ -215,17 +189,13 @@ class App extends Component {
                                 <option value="black">Black</option>
                             </select>
                         </label>
-
                         <input id="input_btn" type="submit" value="Submit" onClick={this.handleSubmit} />
+
                     </form>
                 </div>
             )
         } else if (this.state.result) {
-
-            
-            
-
-
+           // otherwise, if form is complete and there is a result, show results section. 
             return(
                 <ResultTem 
                     Username={this.state.name} 
@@ -236,16 +206,14 @@ class App extends Component {
                     Eyes={this.state.species[this.state.result].eye_colors} 
                     Hair={this.state.species[this.state.result].hair_colors} 
                     Height={this.state.species[this.state.result].average_height} 
-                    img={img} 
+                    img={this.state.img} 
                     reset={this.resetSelection}>
                  </ResultTem>
             )
-            
-
         } else {
+            // otherwise show loading section
             return(
                     <div className='wrapper'>
-                        
                         <h1 className="c1 f1">Which Star Wars Species Are you??</h1>
                         <div>loading...</div>     
                     </div> 
@@ -255,8 +223,5 @@ class App extends Component {
         }
     } 
     
-
-
-
 
 export default App;
