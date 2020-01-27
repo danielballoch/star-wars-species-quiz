@@ -1,3 +1,8 @@
+body{
+    background-image: url("../src/images/background.png");
+    background-size: cover;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,160 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.no-display{
+    display: none;
+}
+
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 400px;
+    background: #34baee;
+    opacity: 0.9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form label {
+    padding: 10px 40px;
+    background: #83e7f9;
+    opacity: 1;
+    
+}
+
+
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+    transition: .3s;
+    border:none;
+    width: 100%;
+    /* width: 100%; */
+    align-self: center;
+    background-color: rgba(0,0,0,0);
+    
+}
+button:hover {
+    transition: .3s;
+    cursor: pointer;
+    font-size: large;
+
+}
+#input_btn {
+    transition: .3s;
+    background-color: #83e7f9;
+    border:none;
+    width: 100%;
+    align-self: center;
+}
+#input_btn:hover {
+    transition: .3s;
+    background: white;
+    cursor: pointer;
+    transform: scale(1.14);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 100px;  
+    
+}
+.result-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto; 
+    margin-bottom: 100px;
+    transition: 0.5s;
+    
+}
+@media (max-width: 740px){
+    .result-wrapper {
+        flex-direction: column;
+    } 
+    img {
+        min-width: 91.5vw;
+    }
+
+    body .resultDiv2 h2 {
+        margin-top: 0px;
+    }
+
+    body .result-wrapper div {
+        background-color: white;
+        opacity: .9;
+        padding: 20px;
+        margin-top: 0;
+    }
+}
+
+
+.result-wrapper div {
+    background-color: white;
+    opacity: .9;
+    padding: 20px;
+    margin-top: 100px;
+}
+.result-wrapper h1 {
+    color: black;
+    box-shadow: none;
+}
+.result-wrapper p {
+    text-align: center;
+}
+.result-wrapper h1 {
+    margin-top: 20px;
+}
+
+.resultDiv2 h2 {
+    margin-top: 150px;
+    text-align: center;
+}
+
+select {
+    
+    padding: 4px;
+    margin: 10px 0;
+}
+input {
+    padding: 4px;
+    margin: 10px 0;
+    width: 94%;  
+}
+select {width: 100%;}
+
+
+
+.btnDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px
+}
+
+.optionSection {
+    padding: 10px 40px;
+    background: #83e7f9;
+    opacity: 1;
+}
+
+.active {
+    font-size: large;
+}
+
+img {
+    max-width: 745px;
+    width: 65vw;
+    margin: auto;
 }
