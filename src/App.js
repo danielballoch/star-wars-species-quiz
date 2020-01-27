@@ -142,7 +142,7 @@ class App extends Component {
             return(
                 //quiz section
                 <div className='wrapper'>
-                    <h1>STAR</h1>
+                    <h1 id="hero">STAR</h1>
                     <h1>WARS</h1>
                     
                     <form>
