@@ -147,6 +147,7 @@ class App extends Component {
                     
                     <form>
                     <h2>Species Quiz</h2>
+                    <p>Enter your information below to see where you fit in the starwars universe.</p>
                         <label>
                             Name:
                             <input required type="text" name="name" placeholder="Luke Skywalker"  onChange={this.handleChange}/>

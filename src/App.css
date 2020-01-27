@@ -13,6 +13,9 @@ body{
 
 p {
     font-size: large;
+    max-width: 240px;
+    text-align: center;
+    margin: 4px auto;
 }
 
 .App {
@@ -66,7 +69,7 @@ form {
     flex-direction: column;
     padding: 20px;
     max-width: 400px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     color: #e4da4a;
     border: 2px solid #e4da4a;
     /* background: #34baee; */
@@ -84,6 +87,7 @@ form label {
 
 h1:first-of-type{
     margin-top: 100px;
+    margin: -24px auto;
 }
 
 h1 {
@@ -92,7 +96,7 @@ h1 {
     font-size: 100px;
     width: 100%;
     color: white;
-    margin: -24px auto;
+    margin: -24px 0 auto;
 
 }
 h2 {
@@ -152,6 +156,7 @@ button:hover {
     margin: auto; 
     margin-bottom: 100px;
     transition: 0.5s;
+    
     
 }
 @media (max-width: 740px){
