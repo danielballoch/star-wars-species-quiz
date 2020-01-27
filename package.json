@@ -1,6 +1,6 @@
 {
   "name": "star-wars-app",
-  "homepage": "https://danielballoch.github.io/robo-friends/",
+  "homepage": "https://danielballoch.github.io/star-wars-species-quiz/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
