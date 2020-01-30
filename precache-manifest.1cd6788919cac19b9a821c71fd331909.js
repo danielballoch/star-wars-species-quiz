@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "370107dc63287c1cc19f0bac8381127b",
+    "revision": "547f1838173e9d0b88c9344300e2ab8d",
     "url": "/star-wars-species-quiz/index.html"
   },
   {
-    "revision": "04bb5dddfae3719e461f",
-    "url": "/star-wars-species-quiz/static/css/main.5a410815.chunk.css"
+    "revision": "bc72c13d098713f572ca",
+    "url": "/star-wars-species-quiz/static/css/main.8b5eee7b.chunk.css"
   },
   {
     "revision": "2546ba638b627d9ef79c",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/star-wars-species-quiz/static/js/2.59c021fe.chunk.js.LICENSE"
   },
   {
-    "revision": "04bb5dddfae3719e461f",
-    "url": "/star-wars-species-quiz/static/js/main.a744038f.chunk.js"
+    "revision": "bc72c13d098713f572ca",
+    "url": "/star-wars-species-quiz/static/js/main.d48f05fc.chunk.js"
   },
   {
     "revision": "ba7bae4824504f3cb5f8",
@@ -46,6 +46,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "987b962f5b33f8855ea79ce0e2b427d6",
     "url": "/star-wars-species-quiz/static/media/Neimodian.987b962f.PNG"
+  },
+  {
+    "revision": "35f31c7aa7cc82eaec5d5c37ef2de044",
+    "url": "/star-wars-species-quiz/static/media/STARWARS.35f31c7a.woff"
+  },
+  {
+    "revision": "3f085be9c96d464c8ed2774e89793393",
+    "url": "/star-wars-species-quiz/static/media/STARWARS.3f085be9.ttf"
+  },
+  {
+    "revision": "da9758b231d709bfbcc4e405f78a7a5c",
+    "url": "/star-wars-species-quiz/static/media/STARWARS.da9758b2.svg"
+  },
+  {
+    "revision": "fa7a31d20cbd5f199216f667dfe9c5d8",
+    "url": "/star-wars-species-quiz/static/media/STARWARS.fa7a31d2.eot"
   },
   {
     "revision": "7ab51776dba2176df127e1416ef1571f",
